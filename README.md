@@ -1,11 +1,25 @@
-<div align="center">
+# JARVIS Android Assistant
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Native Kotlin + Jetpack Compose Android assistant.
 
-  <h1>Built with AI Studio</h2>
+## Current implemented path
+- Runtime Gemini API-key configuration in Settings
+- Android SpeechRecognizer voice input
+- Android TextToSpeech voice output
+- English/Nepali/Hindi language routing
+- Room chat and memory
+- Android actions: app launch, battery, flashlight, device info, alarms, calls, WhatsApp/email preparation, web search
+- Real permission status display
+- GitHub Actions APK build
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Build
+`gradle :app:assembleDebug --stacktrace`
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+APK:
+`app/build/outputs/apk/debug/app-debug.apk`
 
-</div>
+## Security
+Do not commit API keys. Enter the key at runtime in JARVIS Settings.
+
+## Live voice
+The project deliberately does not fake Gemini Live. A true bidirectional Gemini Live session should be integrated using the currently supported Android Live transport/SDK and secure credential flow before claiming Live functionality.
